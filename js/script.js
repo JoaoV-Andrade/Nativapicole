@@ -187,24 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== EFEITO DE SCROLL NO HEADER =====
-    const header = document.querySelector('.main-header');
-    let lastScrollTop = 0;
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Adicionar/remover classe baseada na posição do scroll
-        if (scrollTop > 100) {
-            header.style.backgroundColor = 'rgba(28, 112, 94, 0.95)';
-            header.style.backdropFilter = 'blur(10px)';
-        } else {
-            header.style.backgroundColor = '#1c705e';
-            header.style.backdropFilter = 'none';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+ 
     
     // ===== ANIMAÇÃO DE ENTRADA DOS ELEMENTOS =====
     // Função para verificar se elemento está visível na tela
