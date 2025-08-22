@@ -316,15 +316,33 @@ section h2::after {
 .social-links {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .social-links a {
-    color: var(--secondary-color);
+    /* Define uma caixa de tamanho igual para ambos os links */
+    width: 44px; 
+    height: 44px;
+    
+    /* Centraliza a imagem dentro da caixa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Estilos visuais */
     text-decoration: none;
-    padding: 10px 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     transition: var(--transition);
+    box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho da caixa */
+}
+
+/* Aplica o mesmo tamanho para TODAS as imagens dentro dos links sociais */
+.social-links a img {
+    width: 80px;  /* Define a largura da imagem */
+    height: 80px; /* Define a altura da imagem */
+    object-fit: contain; /* Garante que a imagem se ajuste sem distorcer */
+    flex-shrink: 0; /* Impede que a imagem encolha */
 }
 
 .social-links a:hover {
@@ -332,6 +350,19 @@ section h2::after {
     color: var(--primary-color);
     transform: translateY(-2px);
 }
+
+/* Opcional: Inverte a cor das imagens no hover */
+.social-links a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+
+/* Opcional: Inverte a cor da imagem do Instagram no hover para combinar com o ícone */
+.social-links a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+
 
 /* ===== RESPONSIVIDADE ===== */
 
