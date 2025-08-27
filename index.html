@@ -28,7 +28,7 @@
                     <li><a href="#home">Início</a></li>
                     <li><a href="#about">Quem Somos</a></li>
                     <li><a href="#products">Produtos</a></li>
-                    <li><a href="https://wa.me/556133971476?text=Ol%C3%A1%2C+tudo+bem%3F+Gostaria+de+saber+mais+sobre+os+produtos." target="_blank">Contato</a></li>
+                    <li><a href="javascript:void(0);" onclick="return gtag_report_conversion('https://wa.me/556133971476?text=Ol%C3%A1%2C+tudo+bem%3F+Gostaria+de+saber+mais+sobre+os+produtos.');">Contato</a></li>
                 </ul>
             </nav>
 
@@ -127,5 +127,22 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <!-- Event snippet for [CONTATO][WPP][SITE] conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17043597188/VWLxCL_19Y4bEITPgr8_',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </body>
 </html>
