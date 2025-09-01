@@ -334,7 +334,7 @@ section h2::after {
     /* Estilos visuais que você já tinha */
     background-color: #1c705e;
     text-decoration: none;
-        border-radius: 5px;
+    border-radius: 5px;
     transition: var(--transition);
     box-sizing: border-box;
 }
