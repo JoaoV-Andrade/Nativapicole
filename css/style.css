@@ -540,3 +540,244 @@ html {
     transform: translateY(-3px); /* Efeito de 'levantar' o botão */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
 }
+
+/* ===== ESTILOS EXCLUSIVOS DA PÁGINA DE CARRINHO ===== */
+
+/* Forçar o header a ser verde nesta página, caso queira mudar o padrão branco */
+.lp-page-carrinho .main-header {
+    background-color: var(--primary-color) !important;
+}
+
+/* Estrutura da Hero em Flexbox (Texto | Imagem) */
+.lp-page-carrinho .lp-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2a8a6e 100%);
+    color: var(--secondary-color);
+    padding: 140px 0 100px;
+    margin-top: 0;
+}
+
+.lp-page-carrinho .lp-hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.lp-page-carrinho .lp-hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.lp-page-carrinho .lp-mini-logo {
+    max-width: 180px;
+    margin-bottom: 20px;
+}
+
+.lp-page-carrinho .lp-hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.lp-page-carrinho .lp-hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Placeholder da Imagem do Carrinho */
+.lp-page-carrinho .lp-hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.lp-page-carrinho .lp-image-placeholder {
+    width: 100%;
+    max-width: 450px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.lp-page-carrinho .lp-image-placeholder img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    z-index: 2;
+}
+
+.lp-page-carrinho .lp-placeholder-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+/* Botões Customizados */
+.lp-page-carrinho .lp-btn-primary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+
+.lp-page-carrinho .lp-btn-outline {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    padding: 15px 40px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lp-page-carrinho .lp-btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Seção de Títulos */
+.lp-page-carrinho .lp-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+/* Grid de Benefícios */
+.lp-page-carrinho .lp-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.lp-page-carrinho .lp-feature-card {
+    background: #fdfdfd;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.lp-page-carrinho .lp-feature-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .lp-page-carrinho .lp-hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .lp-page-carrinho .lp-hero-text {
+        text-align: center;
+    }
+    .lp-page-carrinho .lp-hero-text h1 {
+        font-size: 2.2rem;
+    }
+}
+
+.lp-page-carrinho .lp-footer {
+    background: #f4f4f4;
+    padding: 30px 0;
+    text-align: center;
+    color: #666;
+}
+
+.lp-product-item {
+    padding: 0 20px 20px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ===== AJUSTE DA SEÇÃO DE PRODUTOS (HARMONIZAÇÃO) ===== */
+
+.lp-page-carrinho .lp-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Garante colunas equilibradas */
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.lp-page-carrinho .lp-product-item {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden; /* Corta o que sobrar da imagem */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.lp-page-carrinho .lp-product-item:hover {
+    transform: translateY(-5px);
+}
+
+.lp-page-carrinho .lp-product-item img {
+    width: 100%;
+    height: 220px; /* Define uma altura fixa para todas as imagens ficarem iguais */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem achatar ou esticar */
+    display: block;
+}
+
+.lp-page-carrinho .lp-product-item h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin: 15px 0 5px;
+    font-weight: 700;
+}
+
+.lp-page-carrinho .lp-product-item p {
+    padding: 0 15px 20px;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Ajuste do botão abaixo da grid */
+.lp-page-carrinho .lp-btn-outline {
+    margin-top: 40px;
+}
+
+/* Responsividade: imagens um pouco menores em celulares */
+@media (max-width: 480px) {
+    .lp-page-carrinho .lp-product-item img {
+        height: 180px;
+    }
+}
+
+.lp-hero-brand {
+    height: 150px; /* Controla a altura */
+    width: auto;
+}
+
+.lp-page-carrinho .lp-image-placeholder {
+    overflow: hidden; /* Garante que a imagem não saia pelas bordas arredondadas */
+    border: none;     /* Opcional: Remova esta linha se quiser tirar a borda tracejada */
+    padding: 0;       /* Garante que não haja espaço entre a imagem e a borda */
+}
+
+.lp-page-carrinho .lp-image-placeholder img {
+    width: 100%;      /* Força a largura total */
+    height: 100%;     /* Força a altura total */
+    object-fit: cover; /* Faz a imagem preencher sem ficar esticada (corta as sobras) */
+}
